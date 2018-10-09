@@ -1,0 +1,36 @@
+{
+  "name": "mapcss-parse",
+  "version": "0.0.1",
+  "description": "MapCSS parser for OpenStreetMap tagging validation",
+  "main": "dist/index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "test:report": "nyc report npm run test:unit",
+    "test:unit": "mocha test/**",
+    "test:coverage": "nyc -s --check-coverage --lines 96 --functions 96 yarn test:unit",
+    "test": "npm run lint && npm run test:coverage",
+    "build": "cross-env BABEL_ENV=production babel source --out-dir dist"
+  },
+  "repository": "git@github.com:maprulels/mapcss-parse.git",
+  "author": "MapRules Contributors",
+  "license": "GPL-3.0-only",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.6",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-plugin-module-resolver": "^3.1.1",
+    "babel-plugin-transform-remove-strict-mode": "^0.0.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-minify": "^0.5.0-alpha.3cc09dcf",
+    "bluebird": "^3.5.1",
+    "chai": "^4.1.2",
+    "cross-env": "^5.2.0",
+    "eslint": "^5.1.0",
+    "fs": "^0.0.1-security",
+    "joi": "^13.5.2",
+    "mocha": "^5.2.0",
+    "nyc": "^12.0.2"
+  }
+}

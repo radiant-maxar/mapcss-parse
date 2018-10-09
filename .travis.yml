@@ -1,0 +1,10 @@
+sudo: required
+
+services: 
+  - docker
+
+before_install:
+  - docker build -t mapcss-parse .
+
+script:
+  - docker run mapcss-parse /bin/bash -c 'npm run test:fixture && npm run build'

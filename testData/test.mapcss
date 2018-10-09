@@ -1,0 +1,30 @@
+way[amenity=clinic][!healthcare]:closed{
+    throwError: "[amenity=clinic]: MapRules preset 'Health Clinic': may be coupled with healthcare";
+}
+node[amenity=clinic][!healthcare]{
+    throwError: "[amenity=clinic]: MapRules preset 'Health Clinic': may be coupled with healthcare";
+}
+way[amenity=marketplace][!name]:closed{
+    throwWarning: "[amenity=marketplace]: MapRules preset 'Market': must be coupled with name";
+}
+way[amenity=marketplace][!opening_hours]:closed{
+    throwWarning: "[amenity=marketplace]: MapRules preset 'Market': must be coupled with opening_hours";
+}
+way[amenity=marketplace][opening_hours][opening_hours!~/^24\/7$|^sunrise to sunset$/]:closed{
+    throwWarning: "[amenity=marketplace]: opening_hours may be '24/7','sunrise to sunset'";
+}
+way[amenity=marketplace][!height]:closed{
+    throwWarning: "[amenity=marketplace]: MapRules preset 'Market': must be coupled with height";
+}
+way[amenity=marketplace][height][height <= 0]:closed{
+    throwWarning: "[amenity=marketplace]: height must be greater than 0";
+}
+node[amenity=drinking_water][man_made=water_tap][!name]{
+    throwWarning: "[amenity=drinking_water][man_made=water_tap]: MapRules preset 'Water Tap': must be coupled with name";
+}
+node[amenity=school]{
+    throwError: "[amenity=school]: [amenity cannot be coupled with school]";
+}
+way[amenity=school]{
+    throwError: "[amenity=school]: [amenity cannot be coupled with school]";
+}

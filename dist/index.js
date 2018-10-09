@@ -1,0 +1,1 @@
+var Parser=require('./classes/parser'),TagMap=require('./classes/tagMap');exports.parse=function(a){return Parser.parse(a)},exports.tagMap=function(a){return TagMap.getTags(a)};

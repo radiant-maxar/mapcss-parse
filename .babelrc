@@ -1,0 +1,12 @@
+{
+	"env": {
+		"development": {
+			"presets": ["es2015"],
+			"plugins": [ "add-module-exports" ]
+		},
+	    "production": {
+			"presets": ["es2015", "minify"],
+			"plugins": [ "add-module-exports", "transform-remove-strict-mode" ]
+		}
+	}
+}
