@@ -4,7 +4,7 @@ const expect = require('chai').expect;
 const Joi = require('joi');
 
 const readFileSync = require('fs').readFileSync;
-const mapcss = readFileSync('./testData/test2.mapcss').toString();
+const mapcss = readFileSync('./testData/test.mapcss').toString();
 
 const mapcssParse = require('../source');
 

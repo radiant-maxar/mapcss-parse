@@ -28,3 +28,6 @@ node[amenity=school]{
 way[amenity=school]{
     throwError: "[amenity=school]: [amenity cannot be coupled with school]";
 }
+way[building][height=1] {
+    throwError: "..."
+}
