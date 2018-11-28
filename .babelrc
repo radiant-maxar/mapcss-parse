@@ -5,7 +5,7 @@
 			"plugins": [ "add-module-exports" ]
 		},
 	    "production": {
-			"presets": ["es2015", "minify"],
+			"presets": ["es2015", ["minify", { "evaluate": false, "removeUndefined": false}]],
 			"plugins": [ "add-module-exports", "transform-remove-strict-mode" ]
 		}
 	}

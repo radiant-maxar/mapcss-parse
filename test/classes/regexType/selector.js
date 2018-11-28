@@ -28,6 +28,7 @@ module.exports = () => {
                 expect(eT.isMatch('[surfing = great]')).to.be.true;
                 expect(eT.isMatch('[surfing=great]')).to.be.true;
                 expect(eT.isMatch('[surfing != great]')).to.be.true;
+                expect(eT.isMatch('[category=1]'));
             });
         });
         describe('getEqualsValues', () => {
