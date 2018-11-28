@@ -4,8 +4,11 @@
 
 :tada: new features
 
-- allow for numeric charcters in equals regex type
-- add continuous integration via circleci
+- allow for numeric charcters in equals regex type [#1]
+- add continuous integration via circleci [#3]
+
+[#3]: https://github.com/radiant-maxar/mapcss-parse/issues/3
+[#1]: https://github.com/radiant-maxar/mapcss-parse/issues/1
 
 # 0.0.1-alpha
 
