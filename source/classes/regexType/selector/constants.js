@@ -45,14 +45,14 @@ exports.REGEX_COMPONENTS = new RegExp(_REGEX_COMPONENTS);
 /* match single  k/v expressions */
 const _EQUAL = '(?<!(throw(Error|Warning)|fix(Add|ChangeKey|DeleteObject)|suggestAlternative|assert(Match|NoMatch)).*)=\\s?(?![!<>~\\d]+)';
 const _NOT_EQUAL = '!=';
-const _EQUALS = '((?<!(>|<))\\s*?!?=\\s*?(?![!<>~\\d]+))';
+const _EQUALS = '((?<!(>|<))\\s*?!?=\\s*?(?![!<>~]+))';
 const _EQUALS_VALUES = '[^\\[\\]\\=\\s!]+';
 
 exports.EQUAL = new RegExp(_EQUAL); 
 exports.NOT_EQUAL = new RegExp(_NOT_EQUAL); 
 exports.EQUALS = new RegExp(_EQUALS, 'i');
-exports.EQUALS_VALUES = new RegExp(_EQUALS_VALUES, 'g')
-; 
+exports.EQUALS_VALUES = new RegExp(_EQUALS_VALUES, 'g');
+ 
 /* matches 'key not present' equivalent statement */
 const _PRESENCE = '^\\[((?!(<|>|~|=|\\]|\\[|\!(?=\]))).)*\\]$';
 const _POSITIVE_PRESENCE = '\\[([^\\[\\]\\=\\>\\<\\!]*)\\]';
