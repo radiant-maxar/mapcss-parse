@@ -1,0 +1,3 @@
+way[building=yes][healthcare=clinic][!addr:street]:closed{
+    throwWarning: "'Hospital' preset may include addr:street";
+}

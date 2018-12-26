@@ -10,7 +10,8 @@ class Parser {
             Parser.instance = this;
         }
         return Parser.instance;
-    }
+    }   
+
     getPrimitive(component) {
         try {
             return this.getType(component).getPrimitive(component);
@@ -19,7 +20,7 @@ class Parser {
         }
     }
     getPrimitives(source) {
-        return this.getComponents(source).map(c => this.getPrimitive(c));
+        return this.getComponents(source).map((c, index, self) => this.getPrimitive(c));
     }
     getComponents(source) {
         return source.match(this._mainRegex);
@@ -42,6 +43,13 @@ class Parser {
                     mapcssComponent = {};
                 }
                 
+                const key = Object.keys(p)[0];
+                if (['equals', 'notEquals'].indexOf(key) > -1) {
+                    const current = mapcssComponent[key] || {};
+                    const next = p[key];
+                    p = { [key]: Object.assign(current, next) };
+                }
+
                 mapcssComponent = Object.assign(mapcssComponent, p);
 
                 if (i === primitives.length - 1) {

@@ -43,7 +43,7 @@ exports.REGEX_VALUES = _REGEX_VALUES;
 exports.REGEX_COMPONENTS = new RegExp(_REGEX_COMPONENTS);
 
 /* match single  k/v expressions */
-const _EQUAL = '(?<!(throw(Error|Warning)|fix(Add|ChangeKey|DeleteObject)|suggestAlternative|assert(Match|NoMatch)).*)=\\s?(?![!<>~\\d]+)';
+const _EQUAL = '(?<!(throw(Error|Warning)|fix(Add|ChangeKey|DeleteObject)|suggestAlternative|assert(Match|NoMatch)).*)=\\s?(?![!<>~]+)';
 const _NOT_EQUAL = '!=';
 const _EQUALS = '((?<!(>|<))\\s*?!?=\\s*?(?![!<>~]+))';
 const _EQUALS_VALUES = '[^\\[\\]\\=\\s!]+';
