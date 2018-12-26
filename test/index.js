@@ -5,6 +5,7 @@ const Joi = require('joi');
 
 const readFileSync = require('fs').readFileSync;
 const mapcss = readFileSync('./testData/test.mapcss').toString();
+const cumulative = readFileSync('./testData/cumulative.mapcss').toString();
 
 const mapcssParse = require('../source');
 
@@ -32,5 +33,12 @@ describe('mapcss-parse', () => {
                 expect(schemaComplaint).to.be.true;
             });
         });
+        it('builds cumulative tag maps for equal types', () => {
+            mapcssParse.parse(cumulative).forEach(m => {
+                const equals = m.equals;
+                expect(equals.building).to.eql('yes');
+                expect(equals.healthcare).to.eql('clinic');
+            });
+        }); 
     });
 });
