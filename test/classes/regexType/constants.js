@@ -11,7 +11,8 @@ const GEOMETRY_GROUPS = require('../../../source/classes/regexType/geometry/cons
 const NODE = require('../../../source/classes/regexType/geometry/constants').NODE;
 const WAY =  require('../../../source/classes/regexType/geometry/constants').WAY;
 const CLOSEDWAY =  require('../../../source/classes/regexType/geometry/constants').CLOSEDWAY;
-const GEOMS = [NODE, WAY, CLOSEDWAY];
+const WILDCARD =  require('../../../source/classes/regexType/geometry/constants').WILDCARD;
+const GEOMS = [NODE, WAY, CLOSEDWAY, WILDCARD];
 
 const GREATER_THAN = require('../../../source/classes/regexType/selector/constants').GREATER_THAN;
 const GREATER_THAN_EQUAL = require('../../../source/classes/regexType/selector/constants').GREATER_THAN_EQUAL;
