@@ -12,7 +12,7 @@ exports.NODE = new RegExp(_NODE);
 exports.WAY = new RegExp(_WAY);
 exports.CLOSEDWAY = new RegExp(_CLOSEDWAY);
 exports.CLOSEDWAY_FULL = new RegExp(_CLOSEDWAY_FULL);
-exports._WILDCARD = new RegExp(_WILDCARD);
+exports.WILDCARD = new RegExp(_WILDCARD);
 
 exports.GEOMETRY_GROUPS = `${_NODE}|${_WAY}|${_CLOSEDWAY}|${_WILDCARD}`;
 

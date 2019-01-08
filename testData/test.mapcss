@@ -31,3 +31,6 @@ way[amenity=school]{
 way[building][height=1] {
     throwError: "..."
 }
+*[amenity][!name] {
+    throwError: "name required on any amenity"
+}
