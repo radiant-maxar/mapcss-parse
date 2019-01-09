@@ -31,6 +31,7 @@ describe('helpers', () => {
             expect(helpers.geometryTypeFromSource(':closed')).to.eql('closedway');
             expect(helpers.geometryTypeFromSource('node')).to.eql('node');
             expect(helpers.geometryTypeFromSource('way')).to.eql('way');
+            expect(helpers.geometryTypeFromSource('*')).to.eql('*');
         });
     });
 });

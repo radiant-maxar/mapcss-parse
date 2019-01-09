@@ -107,7 +107,7 @@ into this...
 
 | key              | value   | description                                                                                    |
 | ---------------- | :------ | :--------------------------------------------------------------------------------------------- |
-| geometry         | string  | geometry type MapCSS is intended to match                                                      |
+| geometry         | array   | geometry type MapCSS is intended to match                                                      |
 | equals           | object  | object with key/value pair MapCSS is intended to match                                         |
 | notEqual         | string  | object with key/value pair MapCSS is not intended to match                                     |
 | presence         | string  | tag key MapCSS is intended to match                                                            |

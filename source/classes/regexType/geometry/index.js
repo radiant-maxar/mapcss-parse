@@ -14,7 +14,7 @@ class GeometryType extends RegexType {
         return geometryTypeFromSource(super.getMatches(source)[0]);
     }
     getPrimitive(source) {
-        return { geometry: this.getMatches(source) };
+        return { geometry: [this.getMatches(source)] };
     }
 }
 
